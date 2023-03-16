@@ -9,7 +9,6 @@ const removeDisplay = document.querySelector('.remove-button')
 
 let myLibrary = []
 
-
 addBook.addEventListener('click', addBookToLibrary)
     
 function addBookToLibrary(event) {
@@ -24,7 +23,6 @@ function addBookToLibrary(event) {
         event.preventDefault();
     }
 }
-
 
 function book(authorName, bookName, numberOfPages) {
     this.authorName = authorName
