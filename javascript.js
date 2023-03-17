@@ -15,7 +15,7 @@ addBook.addEventListener('click', addBookToLibrary)
 function addBookToLibrary(event) {
 
     if (authorName.value != '' && bookName.value != '' && numberOfPages.value != '') {
-        let myBook = new book(authorName.value, bookName.value, numberOfPages.value, read)
+        let myBook = new book(authorName.value, bookName.value, numberOfPages.value,read)
         myLibrary.push(myBook)
 
         displayBook();
@@ -25,19 +25,21 @@ function addBookToLibrary(event) {
     }
 }
 
+class book{
 
-function book(authorName, bookName, numberOfPages) {
-    this.authorName = authorName
-    this.bookName = bookName
-    this.numberOfPages = numberOfPages
-    this.read = checkRead()   
-}
+    constructor(authorName, bookName, numberOfPages) {
+        this.authorName = authorName
+        this.bookName = bookName
+        this.numberOfPages = numberOfPages
+        this.read = this.checkRead()
+    }
 
-function checkRead() {
-    if (read.checked) {
-        return 'Read';
-    } else {
-        return 'Not Read';
+    checkRead() {
+         if (read.checked) {
+            return 'Read';
+        } else {
+            return 'Not Read';
+        }
     }
 }
 
