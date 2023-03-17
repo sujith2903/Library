@@ -24,18 +24,21 @@ function addBookToLibrary(event) {
     }
 }
 
-function book(authorName, bookName, numberOfPages) {
-    this.authorName = authorName
-    this.bookName = bookName
-    this.numberOfPages = numberOfPages
-    this.read = checkRead()   
-}
+class book{
 
-function checkRead() {
-    if (read.checked) {
-        return 'Read';
-    } else {
-        return 'Not Read';
+    constructor(authorName, bookName, numberOfPages) {
+        this.authorName = authorName
+        this.bookName = bookName
+        this.numberOfPages = numberOfPages
+        this.read = this.checkRead()
+    }
+
+    checkRead() {
+         if (read.checked) {
+            return 'Read';
+        } else {
+            return 'Not Read';
+        }
     }
 }
 
