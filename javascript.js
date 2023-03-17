@@ -14,7 +14,7 @@ addBook.addEventListener('click', addBookToLibrary)
 function addBookToLibrary(event) {
 
     if (authorName.value != '' && bookName.value != '' && numberOfPages.value != '') {
-        let myBook = new book(authorName.value, bookName.value, numberOfPages.value,read)
+        let myBook = new book(authorName.value, bookName.value, numberOfPages.value)
         myLibrary.push(myBook)
 
         displayBook();
