@@ -27,14 +27,30 @@ form{
 
 .book-form{
     display: flex;
-    gap:30px;
+    gap:50px;
     justify-items: center;
-
 }
 
-.book-form > div{
+.book-form > div:nth-child(1),
+.book-form > div:nth-child(2),
+.book-form > div:nth-child(3){
     display: flex;
+    flex-direction: column;
+    align-items: end;
     gap:5px;
+}
+
+.book-form > div > div{
+    display: flex;
+    gap: 5px;
+}
+
+.book-form > div:nth-child(1) > div + div,
+.book-form > div:nth-child(2) > div + div,
+.book-form > div:nth-child(3) > div + div{
+    height: 20px;
+    color: red;
+    font-size: 17px;
 }
 
 .book-form div>label{
