@@ -113,13 +113,13 @@ function showError() {
     }
 
     if (bookName.value == '') {
-        bookError.textContent = 'Author name cannot be a empty'
+        bookError.textContent = 'Book name cannot be a empty'
     } else {
         bookError.textContent = ' '
     }
 
     if (numberOfPages.value == '') {
-        pageError.textContent = 'Author name cannot be a empty'
+        pageError.textContent = 'Number of pages cannot be a empty'
     } else {
         pageError.textContent = ''
     }
